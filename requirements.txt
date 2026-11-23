@@ -1,0 +1,7 @@
+streamlit
+whitebox
+rasterio
+numpy
+pandas
+matplotlib
+scipy
