@@ -1,6 +1,0 @@
-[theme]
-primaryColor = "#8B2635"              # Warna aksen (tombol, slider, tab aktif) - Maroon vulkanik
-backgroundColor = "#FAF7F2"           # Latar utama - Krem hangat (tidak menyilaukan)
-secondaryBackgroundColor = "#EFE9E1"  # Latar sidebar & kotak info - Earth tone lembut
-textColor = "#2C2420"                 # Warna teks - Cokelat tua gelap
-font = "sans serif"                   # Pilihan: "sans serif", "serif", atau "monospace"
