@@ -91,8 +91,15 @@ def ekstrak_morfometri(_uploaded_file, file_id):
             skala_jendela.append(w)
 
     # 2. Ekstraksi Parameter Dasar
-    wbt = whitebox.WhiteboxTools()
-    wbt.set_verbose_mode(False)
+    # Pindah sementara ke folder temp sistem (/tmp di Streamlit Cloud) agar whitebox bisa download & ekstrak tanpa PermissionError
+    cwd_asli = os.getcwd()
+    try:
+        os.chdir(tempfile.gettempdir())
+        wbt = whitebox.WhiteboxTools()
+        wbt.set_working_dir(tmpdir)
+        wbt.set_verbose_mode(False)
+    finally:
+        os.chdir(cwd_asli)
 
     wbt.slope(dem_path, slope_path, units="degrees")
     wbt.profile_curvature(dem_path, prof_path)
